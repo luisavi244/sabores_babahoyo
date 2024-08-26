@@ -1,0 +1,61 @@
+/* Sección de videos con scroll horizontal */
+.videos-container {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden; /* Oculta los elementos que se salen del contenedor */
+}
+
+.videos {
+    display: flex;
+    scroll-behavior: smooth;
+    gap: 10px;
+    overflow-x: scroll;
+    padding: 10px 0; /* Espacio adicional para que los botones no cubran los videos */
+}
+
+.video {
+    flex: none;
+    width: 50%; /* Elimina el ajuste del ancho aquí */
+    height: 450px; /* Altura para los videos, puedes ajustar según lo necesites */
+   
+}
+
+.video iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 5px #72df72 solid;
+    object-fit: contain; /* Para asegurarse de que el video cubra todo el espacio */
+}
+
+/* Botones de navegación */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.nav-button.left {
+    left: 10px;
+}
+
+.nav-button.right {
+    right: 10px;
+}
+
+@media (max-width: 768px){
+    .videos-container{
+        width: 100%;
+    }
+    .video{
+        width: 100%;
+    }
+}

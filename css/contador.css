@@ -1,0 +1,33 @@
+.contador{
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.contadores{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.contador_logo {
+    width: 70px;
+    height: 70px;
+    
+}
+.contador_logo img{
+    width: 100%;
+}
+.contador_numeros span{
+    font-size: 2rem;
+}
+@media (max-width: 768px){
+    .contador{
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+    .contadores{
+        box-shadow: 0 0 10px #e0e0e0;
+        padding: 24px;
+    }
+}

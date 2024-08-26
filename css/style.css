@@ -1,0 +1,365 @@
+/**variables*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --colorTitulos: #0f9e0f;
+    --tamañoLetralink: 0.8rem;
+    --tamañoLetraTitulo: 2rem;
+
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+header{
+    width: 85%;
+    margin:  0 auto;
+}
+.header_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.header_logo{
+
+    width: 50%;
+}
+.header_logo img{
+    width: 150px;
+}
+.header_navbar{
+    width: 50%;
+   
+}
+.header_navbar nav{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.header_navbar nav a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--colorTitulos);
+    transition: 0.3s;
+    padding: 10px;
+    border-radius:4px ;
+}
+.header_navbar nav a:hover{
+    background: #a8ffa8;
+    color: black;
+    
+}
+.active{
+    background: #a8ffa8;
+    color: black;;
+}
+main{
+    width: 85%;
+    margin: 0 auto;
+}
+.introduccion{
+    background: #a8a8a8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    gap: 2rem;
+    background-image: url(/img/baner/baner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to top, rgb(255, 255, 255), rgba(67, 233, 75, 0.596)), 
+                  url(/img/baner/baner.jpg);
+    
+}
+.introduccion_titulo {
+    width: 60%;
+   
+}
+.introduccion_titulo h1{
+    font-size: var(--tamañoLetraTitulo);
+    text-align: center;
+    color: white;
+    
+}
+.introduccion_parrafo{
+    text-align: justify;
+}
+.introduccion_btn_accion{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+}
+.introduccion_btn_accion a{
+    position: relative;
+    background-color: #46d646;
+    text-decoration: none;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    transition: 0.5s all;
+}
+.introduccion_btn_accion a:hover{
+    background-color: #3cb63c;
+}
+
+.redaccion_culinarias{
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+.redaccion_titulo{
+    color: #3cb63c;
+}
+.redaccion_parrafo{
+    text-align: center;
+    line-height: 40px;
+}
+
+/*galeria*/
+.galeria{
+    margin: 10px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.galeria_head{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.galeria_head h2{
+    color: #3cb63c;
+}
+.galeria_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+   
+}
+
+.galeria_container img {
+    width: 30%;
+    cursor: pointer;
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
+
+.galeria_container img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); 
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.opnion {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    width: 85%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    
+}
+.opinion_head{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.opnion h2{
+    color: #000000;
+    font-size: 20px;
+}
+.opinion_container{
+    display: flex;
+    gap: 10px;
+    box-shadow: 0 0 4px #b1b1b1;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.opinion_foto img{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.opinion_comentario{
+    font-size: 0.9rem;
+}
+.titulo_video{
+    width: 85%;
+    margin: 0 auto;
+}
+footer{
+    width: 100%;
+    background-color: #278f27;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+ 
+}
+.footer_informacion{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+footer p{
+    color: white;
+    
+}
+
+
+/*animacion nav*/
+.header_navbar nav a:hover{
+    cursor: pointer;
+
+}
+
+/* resposive moviles */
+@media (max-width: 768px){
+    header{
+        width: 90%
+    }
+    .header_container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* background: #e9e9e9; */
+    }
+    .header_navbar{
+        width: 100%;
+    }
+    .header_navbar nav{
+        flex-direction: column;
+        justify-content: center;
+        /* background: #9e9e9e; */
+        width: 100%;
+        
+        margin-bottom: 1.3rem;
+        margin-top: 1.3rem;
+    }
+    .header_navbar nav a{
+        font-size: 1.3rem;
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        transition: 0.5s;
+    }
+    .header_navbar nav a:hover{
+        background: #8aff8a;
+        
+    }
+    .header_logo{
+        display: flex;
+        width: 100%;
+    }
+    .header_logo img{
+        width: 150px;
+    }
+    main{
+        width: 100%;
+        padding: 10px;
+    }
+    .introduccion{
+        height: 500px;
+    }
+    .introduccion_parrafo{
+        width: 80%;
+        text-align: center;
+    }
+    .redaccion_culinarias{
+        width: 90%;
+    }
+   .redaccion_parrafo{
+    text-align: justify;
+    
+   }
+   .galeria_container img {
+    width: 90%;
+    cursor: pointer;
+    transition: transform 0.3s;
+    border-radius: 10px;
+}
+  .opnion{
+    width: 100%;
+  }
+  .opnion h2{
+    color: black;
+  }
+}

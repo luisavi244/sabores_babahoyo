@@ -1,0 +1,129 @@
+.banneer {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.banneer_lugares {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.banner_imagen {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.banner_imagen img {
+    width: 100%;
+}
+
+.banner_text {
+    width: 100%;
+    max-width: 400px;
+}
+
+.banner_text h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #3cb63c;
+}
+
+h1::after {    
+    content: url('/img/user/ubicacion.svg');    
+    display: inline-block;    
+    margin-left: 10px;    
+    vertical-align: middle;
+}
+
+.lugares {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 5rem;
+}
+
+.lugares h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.lugares_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lugar_card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    min-height: 400px;
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.lugar_card img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.lugar_card h3, .lugar_card p {
+    margin: 15px;
+    flex-grow: 1;
+}
+
+.lugar_card a {
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 0 0 10px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.lugar_card a::after {
+    content: url('/img/user/ubicacion.svg');    
+    display: inline-block;    
+    margin-left: 10px;    
+    vertical-align: middle;
+}
+
+.lugar_card a:hover {
+    background-color: #45A049;
+}
+
+.lugar_card:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .banneer_lugares {
+        flex-direction: column-reverse;
+    }
+    
+    .banner_imagen, .banner_text {
+        width: 100%;
+    }
+}
