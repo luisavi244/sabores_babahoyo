@@ -1,5 +1,0 @@
-.blurr{
-    filter: blur(5px);
-    -webkit-filter: blur(5px); /* Para compatibilidad con navegadores WebKit */
-    transition: all 0.5s ease;
-}
