@@ -1,7 +1,7 @@
 // script.js
 
 // Variable para controlar el estado de pago
-let pagado = false;
+let pagado = true;
 
 // Función para activar el efecto borroso
 function activarBlurr() {
